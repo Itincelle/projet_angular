@@ -1,0 +1,12 @@
+prixMaxi : <input type="number"  [(ngModel)]='prixMaxi' /> <br/>   <!--c'est le binding bi directionnel ;ça permet de relier a prixMaxi  dans les deux sens..si on change ici ça change labas et vice versa..attention pour pouvoir l utiliser il faut importé FormsModule dans le app.module.ts en haut et a  coté de BrowserModule ..pdf angular_v2 page 41-->
+<input type="button"  value="Rechercher produits"
+       (click)="onRechercheProd($event)" />
+...
+<br/>
+<hr/>
+<table border="1">
+   <tr><th>numero</th> <th>label</th><th>prix</th> </tr>
+    <tr *ngFor="let p of tabProduit">
+      <td>{{p.numero}}</td> <td>{{p.label}}</td><td>{{p.prix}}</td>
+    </tr>
+</table>

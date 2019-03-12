@@ -1,5 +1,0 @@
-{   "/rest" : { "secure" : "false" ,
-               "target" : "http://localhost:8080/serveurRestSpringMvc" },
-    "/api-rest2" : { "secure" : "false" ,
-                  "target" : "http://localhost:8080/serveur2LeRetour" }
-}

@@ -4,9 +4,16 @@ prixMaxi : <input type="number"  [(ngModel)]='prixMaxi' /> <br/>   <!--c'est le 
 ...
 <br/>
 <hr/>
-<table border="1">
-   <tr><th>numero</th> <th>label</th><th>prix</th> </tr>
+<table border="1" >
+   <tr><th>numero</th> <th>label</th><th>prix</th><th>supprimer</th></tr>
     <tr *ngFor="let p of tabProduit">
-      <td>{{p.numero}}</td> <td>{{p.label}}</td><td>{{p.prix}}</td>
+    <!--  <td>{{p.numero}}</td> <td>{{p.label}}</td><td>{{p.prix}}</td><td><img width="35" alt="supp" src="C:\Users\Administrateur\Desktop\delete.pnj" (click)="onDeleteProd(p.numero)" /></td>  -->
+    <td>{{p.numero}}</td> <td>{{p.label}}</td><td>{{p.prix}}</td><td><img width="35" alt="supp" src="assets/delete.png" (click)="onDeleteProd(p.numero)" /></td>
     </tr>
 </table>
+
+<hr/>
+label :<input type="text" [(ngModel)]='nouveauProduit.label' /> <br/>
+prix :<input type="number" [(ngModel)]='nouveauProduit.prix' /> <br/>
+<input type="button" value="Ajouter produit"
+      (click)="onAjoutProd($event)" />
